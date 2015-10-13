@@ -18,9 +18,11 @@
         </tr>
         <tr ng-repeat="report in group">
             <td>{{report.id}}</td>
-            <td class="mdl-data-table__cell--non-numeric">{{report.exception}}</td>
             <td class="mdl-data-table__cell--non-numeric">
-                {{report.location}}<br>
+                <strong>{{report.exception}}</strong>
+            </td>
+            <td class="mdl-data-table__cell--non-numeric">
+                <strong>{{report.file}}</strong> line {{report.line}}<br>
                 {{report.method}}
             </td>
             <td>{{report.crashes}}</td>
