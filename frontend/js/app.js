@@ -7,5 +7,10 @@ angular.module('app', ['ui.router', 'angular.filter', 'app.controllers'])
                 url: "/reports",
                 templateUrl: "templates/reports.html",
                 controller: 'ReportsCtrl'
+            })
+            .state('report', {
+                url: '/reports/:id',
+                templateUrl: "templates/report.html",
+                controller: 'ReportCtrl'
             });
     }]);

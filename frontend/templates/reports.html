@@ -16,7 +16,7 @@
                 level {{level}}
             </td>
         </tr>
-        <tr ng-repeat="report in group | orderBy: 'id'">
+        <tr ng-repeat="report in group | orderBy: 'id'" ng-click="showReport(report)">
             <td>{{report.id}}</td>
             <td class="mdl-data-table__cell--non-numeric">
                 <strong>{{report.exception}}</strong>

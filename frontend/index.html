@@ -9,12 +9,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-controller="MainCtrl">
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
             mdl-layout--fixed-header layout-main">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
+            <button class="mdl-button mdl-js-button mdl-button--icon back-button" ui-sref="reports" ui-sref-active="hide">
+                <i class="material-icons">arrow_back</i>
+            </button>
+
+            <span class="mdl-layout-title" ng-if="title">{{title}}</span>
             <div class="mdl-layout-spacer"></div>
 
             <button id="menu-user" class="mdl-button mdl-js-button mdl-button--icon">

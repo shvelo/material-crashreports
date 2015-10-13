@@ -22,3 +22,13 @@
     padding: 0.4em 1em;
     font-weight: bold;
 }
+
+.back-button {
+    margin-left: -1em;
+    margin-right: 0.4em;
+    opacity: 1;
+}
+
+.back-button.hide {
+    opacity: 0;
+}

@@ -1,5 +1,12 @@
 angular.module('app.controllers', [])
-    .controller('ReportsCtrl', ['$scope', function ($scope) {
+    .controller('MainCtrl', ['$scope', '$state', function ($scope, $state) {
+        $scope.setTitle = function (title) {
+            $scope.title = title;
+        };
+    }])
+    .controller('ReportsCtrl', ['$scope', '$state', function ($scope, $state) {
+        $scope.setTitle("Reports");
+
         $scope.reports = [
             {
                 id: 1,
@@ -32,4 +39,12 @@ angular.module('app.controllers', [])
                 users: 2
             }
         ];
+
+        $scope.showReport = function (report) {
+            $state.go('report', { id: report.id, report: report });
+        };
+    }])
+    .controller('ReportCtrl', ['$scope', '$state', '$stateParams', function ($scope, $state, $stateParams) {
+        $scope.report = $stateParams.report;
+        $scope.setTitle("Crash #" + $stateParams.id);
     }]);
