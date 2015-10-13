@@ -1,0 +1,26 @@
+{
+  "name": "material-crashreports",
+  "version": "0.0.1",
+  "homepage": "https://github.com/shvelo/material-crashreports",
+  "authors": [
+    "Nick Shvelidze <captain@pirrate.me>"
+  ],
+  "description": "Backend for ACRA",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "android",
+    "crash",
+    "report",
+    "acra"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "frontend/lib",
+    "test",
+    "tests"
+  ]
+}
