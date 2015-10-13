@@ -16,7 +16,7 @@
                 level {{level}}
             </td>
         </tr>
-        <tr ng-repeat="report in group">
+        <tr ng-repeat="report in group | orderBy: 'id'">
             <td>{{report.id}}</td>
             <td class="mdl-data-table__cell--non-numeric">
                 <strong>{{report.exception}}</strong>
@@ -25,8 +25,8 @@
                 <strong>{{report.file}}</strong> line {{report.line}}<br>
                 {{report.method}}
             </td>
-            <td>{{report.crashes}}</td>
-            <td>{{report.users}}</td>
+            <td ng-class="{ 'mdl-color-text--pink': report.crashes >= 20 }">{{report.crashes}}</td>
+            <td ng-class="{ 'mdl-color-text--pink': report.users >= 10 }">{{report.users}}</td>
             <td>
                 <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
                     <i class="material-icons">code</i>
