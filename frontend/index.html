@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body ng-app="app">
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
             mdl-layout--fixed-header layout-main">
@@ -46,74 +46,17 @@
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Crash Reports</span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link is-active" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link is-active" href="/reports">Reports</a>
         </nav>
     </div>
-    <main class="mdl-layout__content">
-        <div class="mdl-grid">
-            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-                <thead>
-                <tr>
-                    <th width="2em">#</th>
-                    <th class="mdl-data-table__cell--non-numeric">Exception</th>
-                    <th class="mdl-data-table__cell--non-numeric">Location</th>
-                    <th>Crashes</th>
-                    <th>Users</th>
-                    <th width="1em"></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td class="mdl-data-table__cell--non-numeric">NullPointerException</td>
-                    <td class="mdl-data-table__cell--non-numeric">
-                        MainActivity.java line 15<br>
-                        com.tbilisi.bus.MainActivity.onCreate
-                    </td>
-                    <td>25</td>
-                    <td>9</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                            <i class="material-icons">code</i>
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                            <i class="material-icons">delete</i>
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                            <i class="material-icons">bookmark</i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td class="mdl-data-table__cell--non-numeric">ClassCastException</td>
-                    <td class="mdl-data-table__cell--non-numeric">
-                        MainActivity.java line 21<br>
-                        com.tbilisi.bus.MainActivity.onPause
-                    </td>
-                    <td>54</td>
-                    <td>11</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                            <i class="material-icons">code</i>
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                            <i class="material-icons">delete</i>
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                            <i class="material-icons">bookmark_border</i>
-                        </button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
-        </div>
-    </main>
+    <main class="mdl-layout__content" ui-view></main>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.7/angular-filter.min.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>

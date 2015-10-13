@@ -1,0 +1,42 @@
+<div class="mdl-grid">
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col crash-table">
+        <thead>
+        <tr>
+            <th width="2em">#</th>
+            <th class="mdl-data-table__cell--non-numeric">Exception</th>
+            <th class="mdl-data-table__cell--non-numeric">Location</th>
+            <th>Crashes</th>
+            <th>Users</th>
+            <th width="1em"></th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="(level, group) in reports | groupBy: 'level'">
+        <tr class="subheader">
+            <td colspan="6" class="mdl-data-table__cell--non-numeric">
+                level {{level}}
+            </td>
+        </tr>
+        <tr ng-repeat="report in group">
+            <td>{{report.id}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{report.exception}}</td>
+            <td class="mdl-data-table__cell--non-numeric">
+                {{report.location}}<br>
+                {{report.method}}
+            </td>
+            <td>{{report.crashes}}</td>
+            <td>{{report.users}}</td>
+            <td>
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                    <i class="material-icons">code</i>
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                    <i class="material-icons">delete</i>
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                    <i class="material-icons">bookmark</i>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

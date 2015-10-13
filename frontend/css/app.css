@@ -1,3 +1,29 @@
 .layout-main {
     position: static;
 }
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link.is-active {
+    background-color: #e0e0e0;
+}
+
+.crash-table tbody tr {
+    cursor: pointer;
+}
+
+.crash-table .subheader {
+    cursor: default;
+    height: auto !important;
+    background: #2196F3;
+    color: white;
+    text-transform: uppercase;
+}
+
+.crash-table .subheader:hover {
+    background-color: #2196F3 !important;
+}
+
+.crash-table .subheader td {
+    height: auto;
+    padding: 0.4em 1em;
+    font-weight: bold;
+}
