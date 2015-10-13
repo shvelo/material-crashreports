@@ -16,7 +16,8 @@ angular.module('app.controllers', [])
                 line: 15,
                 method: 'com.tbilisi.bus.MainActivity.onCreate',
                 crashes: 20,
-                users: 1
+                users: 1,
+                bookmark: false
             },
             {
                 id: 2,
@@ -26,7 +27,8 @@ angular.module('app.controllers', [])
                 line: 22,
                 method: 'com.tbilisi.bus.MainActivity.onResume',
                 crashes: 100,
-                users: 10
+                users: 10,
+                bookmark: false
             },
             {
                 id: 3,
@@ -36,12 +38,23 @@ angular.module('app.controllers', [])
                 line: 9,
                 method: 'com.tbilisi.bus.HistoryActivity.onCreate',
                 crashes: 10,
-                users: 2
+                users: 2,
+                bookmark: true
             }
         ];
 
         $scope.showReport = function (report) {
             $state.go('report', { id: report.id, report: report });
+        };
+
+        $scope.archiveReport = function (report, $event) {
+            if($event) $event.stopPropagation();
+            _.remove($scope.reports, { id: report.id });
+        };
+
+        $scope.bookmarkReport = function (report, $event) {
+            if($event) $event.stopPropagation();
+            report.bookmark = !report.bookmark;
         };
     }])
     .controller('ReportCtrl', ['$scope', '$state', '$stateParams', function ($scope, $state, $stateParams) {

@@ -17,7 +17,7 @@
             </td>
         </tr>
         <tr ng-repeat="report in group | orderBy: 'id'" ng-click="showReport(report)">
-            <td>{{report.id}}</td>
+            <td>#{{report.id}}</td>
             <td class="mdl-data-table__cell--non-numeric">
                 <strong>{{report.exception}}</strong>
             </td>
@@ -28,14 +28,15 @@
             <td ng-class="{ 'mdl-color-text--pink': report.crashes >= 20 }">{{report.crashes}}</td>
             <td ng-class="{ 'mdl-color-text--pink': report.users >= 10 }">{{report.users}}</td>
             <td>
-                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click="showReport(report)">
                     <i class="material-icons">code</i>
                 </button>
-                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click="archiveReport(report, $event)">
                     <i class="material-icons">delete</i>
                 </button>
-                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                    <i class="material-icons">bookmark</i>
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click="bookmarkReport(report, $event)">
+                    <i class="material-icons" ng-if="report.bookmark">bookmark</i>
+                    <i class="material-icons" ng-if="!report.bookmark">bookmark_border</i>
                 </button>
             </td>
         </tr>
