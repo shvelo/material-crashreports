@@ -1,9 +1,17 @@
+.material-icons {
+    vertical-align: middle;
+}
+
 .layout-main {
     position: static;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link.is-active {
     background-color: #e0e0e0;
+}
+
+.mdl-card {
+    min-height: 0;
 }
 
 .crash-table tbody tr {
@@ -21,6 +29,20 @@
     height: auto;
     padding: 0.4em 1em;
     font-weight: bold;
+}
+
+.crash-table .table-message {
+    color: white;
+    font-weight: bold;
+}
+
+.crash-table .table-message td {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.crash-table .table-message h4 {
+    margin: 0;
 }
 
 .back-button {

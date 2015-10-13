@@ -44,7 +44,7 @@ angular.module('app.controllers', [])
         ];
 
         $scope.showReport = function (report) {
-            $state.go('report', { id: report.id, report: report });
+            $state.go('report', { id: report.id });
         };
 
         $scope.archiveReport = function (report, $event) {
@@ -58,6 +58,16 @@ angular.module('app.controllers', [])
         };
     }])
     .controller('ReportCtrl', ['$scope', '$state', '$stateParams', function ($scope, $state, $stateParams) {
-        $scope.report = $stateParams.report;
+        $scope.report = {
+            id: 3,
+            level: 2,
+            exception: 'ClassCastException',
+            file: 'HistoryActivity.java',
+            line: 9,
+            method: 'com.tbilisi.bus.HistoryActivity.onCreate',
+            crashes: 10,
+            users: 2,
+            bookmark: true
+        };
         $scope.setTitle("Crash #" + $stateParams.id);
     }]);

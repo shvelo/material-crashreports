@@ -41,5 +41,14 @@
             </td>
         </tr>
         </tbody>
+        <tbody ng-if="reports.length === 0">
+        <tr class="table-message mdl-color--light-green">
+            <td colspan="6" class="mdl-data-table__cell--non-numeric">
+                <h4>
+                    <i class="material-icons">done_all</i> Congratulations, you have no crashes!
+                </h4>
+            </td>
+        </tr>
+        </tbody>
     </table>
 </div>

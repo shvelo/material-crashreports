@@ -1,1 +1,25 @@
-{{report}}
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__supporting-text">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col mdl-cell--middle">
+                    <i class="material-icons">bug_report</i>
+                    <span>#{{report.id}}</span>
+                </div>
+                <div class="mdl-cell mdl-cell--11-col">
+
+
+                    <strong>{{report.exception}}</strong>
+
+                    <strong>{{report.file}}</strong> line {{report.line}}<br>
+                    {{report.method}}
+
+                    {{report.crashes}}
+                    {{report.users}}
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
