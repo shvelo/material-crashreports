@@ -54,9 +54,63 @@
     </div>
     <main class="mdl-layout__content">
         <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--middle">
-                <div class="mdl-spinner mdl-js-spinner is-active"></div>
-            </div>
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+                <thead>
+                <tr>
+                    <th width="2em">#</th>
+                    <th class="mdl-data-table__cell--non-numeric">Exception</th>
+                    <th class="mdl-data-table__cell--non-numeric">Location</th>
+                    <th>Crashes</th>
+                    <th>Users</th>
+                    <th width="1em"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="mdl-data-table__cell--non-numeric">NullPointerException</td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        MainActivity.java line 15<br>
+                        com.tbilisi.bus.MainActivity.onCreate
+                    </td>
+                    <td>25</td>
+                    <td>9</td>
+                    <td>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <i class="material-icons">code</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <i class="material-icons">delete</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <i class="material-icons">bookmark</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="mdl-data-table__cell--non-numeric">ClassCastException</td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        MainActivity.java line 21<br>
+                        com.tbilisi.bus.MainActivity.onPause
+                    </td>
+                    <td>54</td>
+                    <td>11</td>
+                    <td>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <i class="material-icons">code</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <i class="material-icons">delete</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <i class="material-icons">bookmark_border</i>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
         </div>
     </main>
 </div>
